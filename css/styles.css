@@ -164,8 +164,6 @@ body {
     }
 }
 
-
-
 .mobile_view {
     display: none;
     justify-content: center;
@@ -200,4 +198,8 @@ body {
 
 .container_form_mobile {
     padding-top: 45vh;
+}
+
+a:hover {
+    color: white;
 }
