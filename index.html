@@ -5,12 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>DubHacks</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/bootstrap.css" media="screen">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
-<body>
+<script>
+    let prevSize = -1;
+    function resize() {
+        let form_web = document.getElementById("form_web");
+        let form_mobile = document.getElementById("form_mobile");
+        let email_web = document.getElementById("input_web");
+        let email_mobile = document.getElementById("input_mobile");
+        let subscribe_web = document.getElementById("subscribe_web");
+        let subscribe_mobile = document.getElementById("subscribe_mobile");
+        if (document.body.width > 600 && (prevSize == -1 || prevSize <= 600)) {
+            if (prevSize > 0) {
+                form_mobile.setAttribute("id", "form_mobile")
+                email_mobile.setAttribute("id", "input_mobile")
+                subscribe_mobile.setAttribute("id", "subscribe_mobile")
+            }
+            form_web.setAttribute("id", "form-web mc-embedded-subscribe-form");
+            email_web.setAttribute("id", "input_web mce-EMAIL");
+            subscribe_web.setAttribute("id", "subscribe_web mc-embedded-subscribe");
+        } else if (document.body.width < 600 && (prevSize == -1 || prevSize >= 600)) {
+            if (prevSize > 0) {
+                form_web.setAttribute("id", "form_web")
+                email_web.setAttribute("id", "input_web")
+                subscribe_web.setAttribute("id", "subscribe_web")
+            }
+            form_mobile.setAttribute("id", "form-web mc-embedded-subscribe-form");
+            email_mobile.setAttribute("id", "input_mobile mce-EMAIL");
+            subscribe_mobile.setAttribute("id", "subscribe_mobile mc-embedded-subscribe");
+        }
+    }
+</script>
+
+<body onresize="resize()" onload="resize()">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -19,21 +50,21 @@
         <div class="container_bgd">
             <img src="assets/bgd_web.gif">
         </div>
-
         <div class="container_body">
             <div class="subtitle row">
                 <p>made for humans,<br/>by humans.</p>
             </div>
             <div class="container_form row">
                 <div class="col-sm-4"></div>
-                <div class="col-sm-4 container_form_form">
+                <form class="col-sm-4 container_form_form" action="https://dubhacks.us3.list-manage.com/subscribe/post?u=24bf0d764d353975abaf102e8&amp;id=8121c70213" method="post" id="form_web" name="mc-embedded-subscribe-form">
                     <div class="input-group mb-3 row">
-                        <input type="text" class="form-control col-sm-10" placeholder="Subscribe for updates" aria-label="Email" width="100px">
+                        <input type="email" name="EMAIL" id="input_web" class="form-control col-sm-10 email" placeholder="Subscribe for updates" aria-label="Email" width="100px" required>
                         <div class="input-group-prepend">
-                            <img src="./assets/icon_arrow.svg" />
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_24bf0d764d353975abaf102e8_8121c70213" tabindex="-1" value=""></div>
+                            <div class="clear"><input type="image" name="subscribe" id="subscribe_web" class="button" src="assets/icon_arrow.svg"></div>
                         </div>
                     </div>
-                </div>
+                </form>
                 <div class="col-sm-4"></div>
             </div>
             <div class="container_info row">
@@ -66,17 +97,18 @@
                 <p>made for humans,<br/>by humans.</p>
             </div>
             <div class="container_bottom">
-                <div class="container_form_mobile">
+                <form class="container_form_mobile" action="https://dubhacks.us3.list-manage.com/subscribe/post?u=24bf0d764d353975abaf102e8&amp;id=8121c70213" method="post" id="form_mobile" name="mc-embedded-subscribe-form">
                     <div class="input-group mb-3 row">
-                        <input type="text" class="form-control col-sm-10" placeholder="Subscribe for updates" aria-label="Email" width="100px">
+                        <input type="text" name="EMAIL" id="input_mobile" class="form-control col-sm-10" placeholder="Subscribe for updates" aria-label="Email" width="100px" required>
                         <div class="input-group-prepend">
-                            <img src="./assets/icon_arrow.svg" />
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_24bf0d764d353975abaf102e8_8121c70213" tabindex="-1" value=""></div>
+                            <div class="clear"><input type="image" name="subscribe" id="subscribe_mobile" class="button" src="assets/icon_arrow.svg"></div>
                         </div>
                     </div>
-                </div>
+                </form>
                 <div class="container_info row">
                     <h1 class="info_date">OCTOBER 19-20, 2019</h1>
-                    <h5 class="info_footer">University of WaSshington. Made with <3 in Seattle</h5>
+                    <h5 class="info_footer">University of Washington. Made with <3 in Seattle</h5>
                 </div>
             </div>
         </div>
