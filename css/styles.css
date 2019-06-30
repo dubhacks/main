@@ -39,7 +39,15 @@ body {
   flex-shrink: 0;
   max-width: 70%;
   max-height: 70%;
-  margin-top: -10vh;
+  position: absolute;
+}
+
+#logo_web {
+  margin-top: -17.5%;
+  height: 100%;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  max-width: 70%;
 }
 
 .container_body {
