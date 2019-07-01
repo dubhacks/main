@@ -41,48 +41,49 @@
         let subscribe_mobile = document.getElementById("subscribe_mobile");
         if (document.body.width > 600 && (prevSize == -1 || prevSize <= 600)) {
             if (prevSize > 0) {
-                form_mobile.setAttribute("id", "form_mobile");
-                email_mobile.setAttribute("id", "input_mobile");
-                subscribe_mobile.setAttribute("id", "subscribe_mobile");
+                form_mobile.id = "form_mobile";
+                email_mobile.id = "input_mobile";
+                subscribe_mobile.id = "subscribe_mobile";
             }
-            form_web.setAttribute("id", "form-web mc-embedded-subscribe-form");
-            email_web.setAttribute("id", "input_web mce-EMAIL");
-            subscribe_web.setAttribute("id", "subscribe_web mc-embedded-subscribe");
+            form_web.id = "form-web mc-embedded-subscribe-form";
+            email_web.id = "input_web mce-EMAIL";
+            subscribe_web.id = "subscribe_web mc-embedded-subscribe";
         } else if (
             document.body.width < 600 &&
             (prevSize == -1 || prevSize >= 600)
         ) {
             if (prevSize > 0) {
-                form_web.setAttribute("id", "form_web");
-                email_web.setAttribute("id", "input_web");
-                subscribe_web.setAttribute("id", "subscribe_web");
+                form_web.id = "form_web";
+                email_web.id = "input_web";
+                subscribe_web.id = "subscribe_web";
             }
-            form_mobile.setAttribute("id", "form-web mc-embedded-subscribe-form");
-            email_mobile.setAttribute("id", "input_mobile mce-EMAIL");
-            subscribe_mobile.setAttribute(
-                "id",
-                "subscribe_mobile mc-embedded-subscribe"
-            );
+            form_mobile.id = "form-mobile mc-embedded-subscribe-form";
+            email_mobile.id = "input_mobile mce-EMAIL";
+            subscribe_mobile.id = "subscribe_mobile mc-embedded-subscribe";
         }
     }
 </script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="./splash.js"></script>
 
 <body onresize="resize()" onload="resize()">
 <script
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"
-></script>
+        crossorigin="anonymous">
+</script>
 <script
         src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"
-></script>
+        crossorigin="anonymous">
+</script>
 <script
         src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"
-></script>
+        crossorigin="anonymous">
+</script>
 
 <div class="web_view">
     <div class="container_bgd">
@@ -95,45 +96,12 @@
         </div>
         <div class="container_form row">
             <div class="col-sm-4"></div>
-            <form
-                    class="col-sm-4 container_form_form"
-                    action="https://dubhacks.us3.list-manage.com/subscribe/post?u=24bf0d764d353975abaf102e8&amp;id=8121c70213"
-                    method="post"
-                    id="form_web"
-                    name="mc-embedded-subscribe-form"
-            >
+            <form class="col-sm-4 container_form_form" action="https://dubhacks.us3.list-manage.com/subscribe/post?u=24bf0d764d353975abaf102e8&amp;id=8121c70213" method="post" id="form_web" name="mc-embedded-subscribe-form" autocomplete="off">
                 <div class="input-group mb-3 row">
-                    <input
-                            type="email"
-                            name="EMAIL"
-                            id="input_web"
-                            class="form-control col-sm-10 email"
-                            placeholder="Subscribe for updates"
-                            aria-label="Email"
-                            width="100px"
-                            required
-                    />
+                    <input type="email" name="EMAIL" id="input_web" class="form-control col-sm-10 email" placeholder="Subscribe for updates" aria-label="Email" width="100px" required>
                     <div class="input-group-prepend">
-                        <div
-                                style="position: absolute; left: -5000px;"
-                                aria-hidden="true"
-                        >
-                            <input
-                                    type="text"
-                                    name="b_24bf0d764d353975abaf102e8_8121c70213"
-                                    tabindex="-1"
-                                    value=""
-                            />
-                        </div>
-                        <div class="clear">
-                            <input
-                                    type="image"
-                                    name="subscribe"
-                                    id="subscribe_web"
-                                    class="button"
-                                    src="assets/icon_arrow.svg"
-                            />
-                        </div>
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_24bf0d764d353975abaf102e8_8121c70213" tabindex="-1" value=""></div>
+                        <div class="clear"><input type="image" name="subscribe" id="subscribe_web" class="button" src="assets/icon_arrow.svg"></div>
                     </div>
                 </div>
             </form>
@@ -145,10 +113,7 @@
                 University of Washington. Made with <3 in Seattle
             </h5>
             <div class="container_info_icons">
-                <a
-                        href="https://www.facebook.com/DubHacks-1497687910461792/"
-                        target="_blank"
-                >
+                <a href="https://www.facebook.com/DubHacks-1497687910461792/" target="_blank">
                     <img src="./assets/icon_facebook.svg"/>
                 </a>
                 <a href="https://medium.com/@DubHacks" target="_blank">
@@ -181,6 +146,7 @@
                     method="post"
                     id="form_mobile"
                     name="mc-embedded-subscribe-form"
+                    autocomplete="off"
             >
                 <div class="input-group mb-3 row">
                     <input
@@ -225,7 +191,7 @@
             </div>
         </div>
     </div>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-    <script src="./splash.js"></script>
-  </body>
+</div>
+
+</body>
 </html>
