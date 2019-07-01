@@ -26,8 +26,8 @@ body {
 }
 
 .container_bgd {
-  height: calc(100% - 36px);
-  width: calc(100% - 36px);
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,8 +51,8 @@ body {
 }
 
 .container_body {
-  height: calc(100% - 36px);
-  width: calc(100% - 36px);
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,7 +70,7 @@ body {
 
 .container_form {
   width: 100vw;
-  margin-top: 50vh;
+  margin-top: 60vh;
 }
 
 .container_form_form {
@@ -163,7 +163,7 @@ body {
 
 @media screen and (max-width: 400px) {
   .container_form_mobile {
-    padding-top: 35vh !important;
+    padding-top: 40vh !important;
   }
 
   .input-group {
@@ -176,6 +176,14 @@ body {
   justify-content: center;
 }
 
+#logo_mobile {
+  margin-top: 50px;
+}
+
+#bgd_mobile {
+  padding-top: 30px;
+}
+
 .container_bgd_mobile {
   height: 100%;
   width: 100%;
@@ -183,8 +191,7 @@ body {
 }
 
 .container_bgd_mobile img {
-  max-height: 100vh;
-  max-width: 100vw;
+  max-width: 400px;
   margin-left: 50%;
   transform: translateX(-50%);
 }
@@ -198,13 +205,13 @@ body {
 
 .subtitle_mobile {
   font-family: GeometriaMedium, sans-serif;
-  font-size: 1.5em;
+  font-size: 1.25em;
   text-align: center;
-  margin-top: 15vh;
+  margin-top: 100px;
 }
 
 .container_form_mobile {
-  padding-top: 45vh;
+  padding-top: 40vh;
 }
 
 a:hover {
