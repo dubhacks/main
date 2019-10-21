@@ -3,14 +3,7 @@
 @mixin teamImage() {
   @for $i from 1 through 13 {
     &:nth-child(#{$i}) {
-      @if $i==10 {
-        background-image: url("../assets/team/"+$i+".jpg");
-        background-position-y: -1rem;
-        background-position-x: -0.5rem;
-        background-size: 3rem;
-      } @else {
-        background-image: url("../assets/team/"+$i+".png");
-      }
+      background-image: url("../assets/team/"+$i+".png");
     }
   }
 }
